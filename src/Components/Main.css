@@ -200,3 +200,28 @@ right: 10px;
     font-weight: 300;
     line-height: 1.8;
 }
+
+@media (max-width: 768px) {
+    .main .greet {
+        font-size: 36px;
+        margin: 30px 0;
+    }
+
+    .main .nav {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .main .cards {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .search-box {
+        padding: 8px 15px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+        gap:5px
+    }
+}
