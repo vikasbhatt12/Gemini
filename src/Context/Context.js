@@ -43,13 +43,24 @@ const ContextProvider = (props) => {
 //     setInput("");
 //   };
 
-const onSent = async (input) => {
+const onSent = async (prompt) => {
     setResultData(""); // Clear the previous result
     setLoading(true);
     setShowResult(true);
-    setRecentPrompt(input);
+
+    let response;
+
+    if(prompt !== undefined) {
+        setPrevPrompts(prev => [...prev, prompt]);
+        setRecentPrompt(prompt);
+        response = await run(prompt);
+      } else {
+        setPrevPrompts(prev => [...prev, input]);
+        setRecentPrompt(input);
+        response = await run(input);
+      }
+      
     
-    const response = await run(input); // Get response
     let formattedResponse = response
       .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // Bold text between double asterisks
       .replace(/\*(.*?)\*/g, "<i>$1</i>") // Italic text between single asterisks

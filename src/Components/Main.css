@@ -117,14 +117,15 @@ right: 10px;
 }
 
 .main .bottom-info{
-    font-size: 13px;
+    padding: 20px;
+    font-size: 18px;
     margin: 15px, auto;
     text-align: center;
     font-weight: 300; 
 }
 
 .result{
-    padding: 0px 5%;
+    
     max-height: 70vh;
     overflow-y: scroll;
 }
@@ -143,6 +144,8 @@ right: 10px;
 .result-title p {
     font-size: 1.2rem;
     font-weight: bold;
+    color: #1f1f1f;
+    
   }
 
 .result img{
@@ -154,7 +157,7 @@ right: 10px;
     display: flex;
     align-items: start;
     gap: 20px;
-    padding: 20px;
+    
     
 }
 
@@ -163,6 +166,7 @@ right: 10px;
     line-height: 1.5;
     color: #444;
     white-space: pre-wrap;
+    font-weight: 400;
   }
 .loader{
     width: 100%;
