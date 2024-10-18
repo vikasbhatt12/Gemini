@@ -3,6 +3,7 @@
     min-height: 100vh;
     padding-bottom: 15vh;
     position: relative;
+    font-family: "Roboto", sans-serif;
 }
 
 .main .nav{
@@ -80,7 +81,7 @@ right: 10px;
     width: 100%;
     max-width: 900px;
     padding: 0px 20px;
-    margin: auto;
+    margin-top: 50px;
 } 
 
 .search-box{
@@ -89,8 +90,10 @@ right: 10px;
     justify-content: space-between;
     gap: 20px;
     background-color: #f0f4f9;
+    border: 1px solid #ddd;
     padding: 10px 20px;
     border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-box img{
@@ -137,6 +140,11 @@ right: 10px;
     gap: 20px;
 }
 
+.result-title p {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
 .result img{
     width: 40px;
     border-radius: 50%;
@@ -146,8 +154,16 @@ right: 10px;
     display: flex;
     align-items: start;
     gap: 20px;
+    padding: 20px;
+    
 }
 
+.result-data p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #444;
+    white-space: pre-wrap;
+  }
 .loader{
     width: 100%;
     display: flex;
